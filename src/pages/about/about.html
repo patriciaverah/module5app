@@ -1,0 +1,34 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-buttons start>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    
+        <ion-title>About me and the app</ion-title>
+      </ion-navbar>
+
+</ion-header>
+
+<!-- 
+  Information about the creator of the app 
+  and the app itself.
+
+  Functionality -> button that leads to 
+  contact page.
+-->
+<ion-content padding>
+  I am Patricia, an exange student @ Laurea University of Applied Sciences. <br> <br>
+  I am the only one forming the group that made this app, I hope you enjoy it. <br> <br>
+
+  <!-- 
+    Button to contact page
+  -->
+  <button ion-button="" class="contact-btn" type="button" (click)="goContact()"> How to contact me </button> <br> <br>
+
+  <b>About the app:</b><br>
+  You can add elements in the To-Do List in the List page on the app using the button for it. <br> <br>
+  If you want to remove an element, just swipe the item of the list to the left and a trash icon will appear. Click on it and - after confirming the removal - the item will desappear from the list.  
+</ion-content>

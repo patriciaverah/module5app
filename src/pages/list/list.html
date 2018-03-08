@@ -1,0 +1,54 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-buttons start>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+  
+      <ion-title>To-do list</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <!-- 
+      Adding items: text field + button
+    -->
+    <ion-row>
+      <ion-col col-9>
+        <ion-item>
+          <ion-input [(ngModel)]="newItem" placeholder="New thing to do"></ion-input>
+        </ion-item>
+      </ion-col>
+      
+      <ion-col>
+        <button ion-button (click)="addBtnClicked()">Add!</button>
+      </ion-col>
+    </ion-row>
+
+    <!-- 
+      List of items in user's list
+    -->
+    <ion-list>
+      <!-- 
+        Actual items
+      -->
+      <ion-item-sliding *ngFor="let item of arrData; let i = item">
+        <ion-item>
+            {{ item.$value }}
+        </ion-item>
+
+        <!-- 
+          Remove item code
+        -->
+        <ion-item-options side="right">
+          <button ion-button color="danger" icon-only (click)="presentConfirm(item.$key)">
+            <ion-icon name="trash"> </ion-icon>
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-content>
